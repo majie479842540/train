@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js方法测试</title>
+		<script type="text/javascript" src="test.js"></script>
+		<script>
+			function init(){
+				var arr = [{"name":"待接单","status":"WAIT_ACCEPT","isShadowed":true},{"name":"待发货","status":"WAIT_DELIVER","isShadowed":true,"isCurrentStatus":true},{"name":"验货入库","status":"STOCK_IN"},{"name":"已完成","status":"DELIVERED"}];
+				var arr2 = [1];
+				var arr3 = [{"name":"待接单","status":"WAIT_ACCEPT","isShadowed":true,"isCurrentStatus":true},{"name":"待发货","status":"WAIT_DELIVER","isShadowed":true},{"name":"验货入库","status":"STOCK_IN"},{"name":"已完成","status":"DELIVERED"}];
+				document.getElementsByTagName("body")[0].appendChild(addArrow(arr3));
+			}
+		</script>
+		<style>
+			*{margin: 0; padding: 0;}
+			.step_box{
+				position: absolute;
+				left: 40%;
+				top: 30%;
+			}
+			.step_item{
+				position: absolute;
+				width: 95px;
+				height: 25px;
+				background-color: beige;
+			}
+			.step_item:nth-child(1){
+				left: 0;
+			}
+			.step_item:nth-child(1) .step_item_left{
+				border-color: transparent;
+			}
+			.step_item:nth-child(2){
+				left: 95px;
+			}
+			
+			.step_item:nth-child(3){
+				left: 190px;
+			}
+			.step_item:nth-child(4){
+				left: 285px;
+			}
+			.step_item:nth-child(4) .step_item_right{
+				border-color: transparent;
+			}
+			.step_item_left{
+				position: absolute;
+				left: 0;
+				width: 0;
+				height: 0;
+				border: 12.5px solid;
+				border-color: transparent transparent transparent white;
+			}
+			.step_item_content{
+				position: absolute;
+				text-align: center;
+				font-size: 12px;
+				line-height: 25px;
+				left: 12.5px;	
+				width: 70px;
+				height: 25px;
+			}
+			.step_item_right{
+				position: absolute;
+				left: 82.5px;
+				width: 0;
+				height: 0;
+				border: 12.5px solid;
+				border-color: white white white transparent;
+			}
+			.step_result{
+				width: 95px;
+				height:25px;
+				box-sizing: border-box;
+				border: 1px solid #d0021b;
+				color: #D0021B;
+				text-align: center;
+				line-height: 25px;
+			}
+		</style>
+	</head>
+	<body onload="init()">
+	</body>
+</html>

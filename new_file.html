@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>纯css</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			.step_box{
+				position: absolute;
+				left: 40%;
+				top: 30%;
+			}
+			.step_item{
+				position: absolute;
+				width: 95px;
+				height: 25px;
+				background-color: beige;
+			}
+			.step_item:nth-child(1){
+				left: 0;
+			}
+			.step_item:nth-child(1) .step_item_left{
+				border-color: transparent;
+			}
+			.step_item:nth-child(2){
+				left: 95px;
+				background-color: #108ee9;
+				color: white;
+			}
+			
+			.step_item:nth-child(3){
+				left: 190px;
+			}
+			.step_item:nth-child(4){
+				left: 285px;
+			}
+			.step_item:nth-child(4) .step_item_right{
+				border-color: transparent;
+			}
+			.step_item_left{
+				position: absolute;
+				left: 0;
+				width: 0;
+				height: 0;
+				border: 12.5px solid;
+				border-color: transparent transparent transparent white;
+			}
+			.step_item_content{
+				position: absolute;
+				text-align: center;
+				font-size: 12px;
+				line-height: 25px;
+				left: 12.5px;	
+				width: 70px;
+				height: 25px;
+			}
+			.step_item_right{
+				position: absolute;
+				left: 82.5px;
+				width: 0;
+				height: 0;
+				border: 12.5px solid;
+				border-color: white white white transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="step_box">
+			<div class="step_item">
+				<div class="step_item_left"></div>
+				<div class="step_item_content">草稿</div>
+				<div class="step_item_right"></div>
+			</div>
+			<div class="step_item">
+				<div class="step_item_left"></div>
+				<div class="step_item_content">待审核</div>
+				<div class="step_item_right"></div>
+			</div>
+			<div class="step_item">
+				<div class="step_item_left"></div>
+				<div class="step_item_content">待复合</div>
+				<div class="step_item_right"></div>
+			</div>
+			<div class="step_item">
+				<div class="step_item_left"></div>
+				<div class="step_item_content">已核准</div>
+				<div class="step_item_right"></div>
+			</div>
+		</div>
+		
+	</body>
+</html>
